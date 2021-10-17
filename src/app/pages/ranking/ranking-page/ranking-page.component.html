@@ -1,3 +1,41 @@
 <div class="container">
-  <p>ranking page works!</p>
+  <form>
+    <div class="form-group form-inline">
+      Szukaj klubu: <input class="form-control ml-2" type="text" />
+    </div>
+  </form>
+</div>
+<div class="table-responsive text-nowrap">
+  <table class="table table-striped table-dark text-center mt">
+    <thead>
+      <th scope="col">Miejsce</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Punkty</th>
+      <th scope="col">Skrót</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Mecze</th>
+      <th scope="col">Remisy</th>
+      <th scope="col">Przegrane</th>
+      <th scope="col">Bramki strzelone</th>
+      <th scope="col">Bramki stracone</th>
+      <th scope="col">Róznica bramek</th>
+    </thead>
+    <tbody class="table-light text-dark text-center">
+      <tr *ngFor="let item of rankingItemList?.data?.standings">
+        <td>{{ item?.note?.rank }}</td>
+        <td>
+          <img src="{{ item.team.logos[0].href }}" width="50" height="50" />
+        </td>
+        <td>{{ item.stats[6].displayValue }}</td>
+        <td>{{ item.team.shortDisplayName }}</td>
+        <td>{{ item.team.displayName }}</td>
+        <td>{{ item.stats[0].displayValue }}</td>
+        <td>{{ item.stats[2].displayValue }}</td>
+        <td>{{ item.stats[1].displayValue }}</td>
+        <td>{{ item.stats[3].displayValue }}</td>
+        <td>{{ item.stats[5].displayValue }}</td>
+        <td>{{ item.stats[9].displayValue }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
