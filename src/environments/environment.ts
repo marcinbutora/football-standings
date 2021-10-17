@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl:
+    'https://api-football-standings.azharimm.site/leagues/eng.1/standings?season=2021&sort=asc',
 };
 
 /*
