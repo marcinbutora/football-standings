@@ -8,9 +8,9 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { RankingPageComponent } from './pages/ranking/ranking-page/ranking-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { RankingPageComponent } from './pages/ranking/ranking-page/ranking-page.component';
 
 @NgModule({
   declarations: [
