@@ -24,11 +24,4 @@ export class RankingPageComponent implements OnInit {
       this.rankingItemList = item;
     });
   }
-
-  filterList(text: string) {
-    return this.rankingItemList?.data.standings.filter((res) => {
-      res.team.name.toLocaleLowerCase().includes(text.toLocaleLowerCase()),
-        console.log('filtered', this.rankingItemList);
-    });
-  }
 }

@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RankingPageComponent } from './pages/ranking/ranking-page/ranking-page.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RankingPageComponent } from './pages/ranking/ranking-page/ranking-page.
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
