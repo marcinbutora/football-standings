@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Ranking } from '../model/ranking';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UnaryExpression } from 'typescript';
+import { Ranking, Standing } from '../model/ranking';
 import { RankingService } from '../service/ranking.service';
 
 @Component({
@@ -9,6 +11,7 @@ import { RankingService } from '../service/ranking.service';
 })
 export class RankingPageComponent implements OnInit {
   rankingItemList: Ranking | undefined;
+  termToSearch: string = '';
 
   constructor(private rankingService: RankingService) {}
 
@@ -19,6 +22,13 @@ export class RankingPageComponent implements OnInit {
   getDataList() {
     return this.rankingService.getData().subscribe((item) => {
       this.rankingItemList = item;
+    });
+  }
+
+  filterList(text: string) {
+    return this.rankingItemList?.data.standings.filter((res) => {
+      res.team.name.toLocaleLowerCase().includes(text.toLocaleLowerCase()),
+        console.log('filtered', this.rankingItemList);
     });
   }
 }
