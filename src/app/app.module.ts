@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RankingPageComponent } from './pages/ranking/ranking-page/ranking-page.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './pages/ranking/service/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HomeComponent,
     NotfoundComponent,
     RankingPageComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     Ng2SearchPipeModule,
   ],
-  providers: [],
+  providers: [FilterPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

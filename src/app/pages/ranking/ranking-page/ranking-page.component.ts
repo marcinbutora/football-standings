@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UnaryExpression } from 'typescript';
-import { Ranking, Standing } from '../model/ranking';
+import { Ranking } from '../model/ranking';
+import { FilterPipe } from '../service/filter.pipe';
 import { RankingService } from '../service/ranking.service';
 
 @Component({

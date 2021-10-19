@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <form>
+  <form id="filterSearch">
     <div class="form-group form-inline">
       <input
         [(ngModel)]="termToSearch"
@@ -28,7 +28,7 @@
           <tr
             *ngFor="
               let item of rankingItemList?.data?.standings
-                | filter: termToSearch
+                | filterSearch: termToSearch
             "
           >
             <td>{{ item?.note?.rank }}</td>
