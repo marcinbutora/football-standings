@@ -5,12 +5,12 @@ import { Ranking, Standing } from '../model/ranking';
   name: 'filterSearch',
 })
 export class FilterPipe implements PipeTransform {
-  transform(ranking: Standing[] | undefined, termToSearch: any) {
+  transform(ranking: Standing[] | undefined, termToSearch: string) {
     if (termToSearch === undefined) return ranking;
     return ranking?.filter(function (item) {
       return (
         item.team.name.toLowerCase().includes(termToSearch.toLowerCase()) ||
-        item.stats[0].displayValue.match(termToSearch)
+        item.stats[6].displayValue.match(termToSearch)
       );
     });
   }
