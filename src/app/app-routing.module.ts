@@ -9,7 +9,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'ranking',
-    component: RankingPageComponent,
+    loadChildren: () =>
+      import('./pages/ranking/ranking-routing.module').then(
+        (m) => m.RankingRoutingModule
+      ),
     resolve: { ranking: RankingResolverService },
   },
   { path: '404', component: NotfoundComponent },
