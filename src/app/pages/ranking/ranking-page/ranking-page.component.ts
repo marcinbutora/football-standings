@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Ranking } from '../model/ranking';
 import { FilterPipe } from '../service/filter.pipe';
+import { RankingResolverService } from '../service/ranking-resolver.service';
 import { RankingService } from '../service/ranking.service';
 
 @Component({
@@ -12,15 +14,12 @@ export class RankingPageComponent implements OnInit {
   rankingItemList: Ranking | undefined;
   termToSearch: string = '';
 
-  constructor(private rankingService: RankingService) {}
+  constructor(
+    private rankingService: RankingService,
+    private act: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getDataList();
-  }
-
-  getDataList() {
-    return this.rankingService.getData().subscribe((item) => {
-      this.rankingItemList = item;
-    });
+    this.rankingItemList = this.act.snapshot.data['ranking'];
   }
 }

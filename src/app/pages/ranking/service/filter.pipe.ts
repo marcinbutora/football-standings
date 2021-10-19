@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Ranking, Standing } from '../model/ranking';
+import { Standing } from '../model/ranking';
 
 @Pipe({
   name: 'filterSearch',
