@@ -8,7 +8,8 @@ import { Ranking } from '../model/ranking';
   providedIn: 'root',
 })
 export class RankingService {
-  private readonly apiPath: string = environment.apiUrl;
+  private readonly apiPath: string =
+    'https://api-football-standings.azharimm.site/leagues/eng.1/standings?season=2021&sort=asc';
 
   constructor(private http: HttpClient) {}
 

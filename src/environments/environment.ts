@@ -4,8 +4,6 @@
 
 export const environment = {
   production: false,
-  apiUrl:
-    'https://api-football-standings.azharimm.site/leagues/eng.1/standings?season=2021&sort=asc',
 };
 
 /*
