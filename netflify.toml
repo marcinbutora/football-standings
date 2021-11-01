@@ -66,11 +66,11 @@
 
 # A redirect rule with many of the supported properties
 [[redirects]]
-  from = "/old-path"
-  to = "/new-path"
+  from = "/*"
+  to = "/index.html"
 
   # The default HTTP status code is 301, but you can define a different one.
-  status = 302
+  status = 200
 
   # By default, redirects won’t be applied if there’s a file with the same
   # path as the one defined in the `from` property. Setting `force` to `true`
