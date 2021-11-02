@@ -12,5 +12,6 @@ export class NavbarComponent {
   links = [
     { path: 'home', title: 'Strona główna' },
     { path: 'ranking', title: 'Ranking' },
+    { path: '404', title: 'Page 404' },
   ];
 }
